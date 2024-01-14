@@ -1,0 +1,13 @@
+<!-- app/views/nodes/index.html.erb -->
+
+<h1>Nodes List</h1>
+<ul>
+  <% @nodes.each do |node| %>
+    <li>
+      <%= link_to node.title, node_path(node) %> (Edit) |
+      <%= link_to 'Delete', node, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to 'New Node', new_node_path %>
