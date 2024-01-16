@@ -39,27 +39,16 @@ class NodesController < ApplicationController
   end
   
   def destroy
-    node = Node.delete(node_params)
+    if @node.destroy
+      flash[:notice] = 'Node was successfully destroyed.'
+    else
+      flash[:alert] = 'Error destroying node.'
+      Rails.logger.error("Error destroying node: #{node.errors.full_messages}")
+    end
+    redirect_to root_path
   end
-
-  # def destroy
-  #   @node = Node.find(params[:id])
-  #   if @node.destroy
-  #     flash[:notice] = 'Node was successfully destroyed.'
-  #   else
-  #     flash[:alert] = 'Error destroying node.'
-  #     Rails.logger.error("Error destroying node: #{node.errors.full_messages}")
-  #   end
-  
-  #   respond_to do |format|
-  #     format.html { redirect_to nodes_path }
-  #     format.js   # это должно отрендерить destroy.js.erb
-  #   end
-  # end
-  
-  
-  
-    private
+    
+  private
 
   def set_node
     @node = Node.find(params[:id])
