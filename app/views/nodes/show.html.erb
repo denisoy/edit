@@ -5,7 +5,7 @@
 
 <%= link_to 'Edit', edit_node_path(@node) %> |
 <%= link_to 'Back', nodes_path %> |
-<%= link_to 'Delete', @node, method: :delete, data: { confirm: 'Are you sure?' } %>
+<%= link_to 'Delete', node_path(@node), data: { turbo_confirm: "Are you sure?", turbo_method: :delete } %>
 
 <% if flash[:notice] %>
   <p class="notice"><%= flash[:notice] %></p>
