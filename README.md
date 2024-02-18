@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -25,6 +26,10 @@ Things you may want to cover:
 
 * Допомагали над створеняям проекту:
 
+=======
+Надихнув мене на створення цього  проекту Віктор Турський. А саме у розповіді у https://www.youtube.com/watch?v=vunaSc37B5o
+Допомагали над створеняям проекту:
+>>>>>>> 33208ed397fefc572f701c2f24fbe226fc30e0fa
 - migalenkom
 - dgrebenyuk
 - Chat GPT 3.5 )))
