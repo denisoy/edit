@@ -1,0 +1,8 @@
+<li>
+  <%= link_to node.title, node_path(node) %>
+  
+
+  <ul class="node-branches">
+    <%= render partial: 'nodes/child_node', collection: node.children, as: :node %>
+  </ul>
+</li>

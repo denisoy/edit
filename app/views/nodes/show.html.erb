@@ -1,16 +1,15 @@
 <!-- app/views/nodes/show.html.erb -->
-<h1><%= @node.title %></h1>
-<p><strong>Content:</strong></p>
-<p><%= @node.content %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @node.title %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @node.content %>
+</p>
 
 <%= link_to 'Edit', edit_node_path(@node) %> |
-<%= link_to 'Back', nodes_path %> |
-<%= link_to 'Delete', node_path(@node), data: { turbo_confirm: "Are you sure?", turbo_method: :delete } %>
-
-<% if flash[:notice] %>
-  <p class="notice"><%= flash[:notice] %></p>
-<% end %>
-
-<% if flash[:alert] %>
-  <p class="alert"><%= flash[:alert] %></p>
-<% end %>
+<%= link_to 'Back', nodes_path %>
+<%= link_to 'Delete', @node, method: :delete, data: { turbo_confirm: "Are you sure?", turbo_method: :delete } %>

@@ -1,0 +1,8 @@
+<li>
+  <%= link_to node.title, node_path(node) %>
+  <%= link_to 'Delete', node_path(node), data: { turbo_confirm: "Are you sure?", turbo_method: :delete } %>
+
+  <ul class="node-branches">
+    <%= render partial: 'nodes/child_node', collection: node.children, as: :node %>
+  </ul>
+</li>

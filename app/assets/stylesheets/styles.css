@@ -1,0 +1,71 @@
+/* app/assets/stylesheets/styles.css */
+
+h1 {
+    color: #333;
+  }
+  
+  .node-container {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  form {
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .node-actions a {
+    text-decoration: none;
+    margin-right: 10px;
+    color: #333;
+  }  
+  
+  .node {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 5px;
+  }
+  
+  .arrow {
+    margin-left: 10px;
+    color: #666;
+  }
+  
+  .node-branches {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .node-branches li {
+    margin: 5px 0;
+  }
+  
+  /* styles.css */
+
+  .node-branches-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+  }
+  

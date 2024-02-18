@@ -1,0 +1,11 @@
+<!-- app/views/nodes/_node.html.erb -->
+
+<li>
+  <%= link_to node.title, node_path(node) %>
+
+  <% if node.children.any? %>
+    <ul>
+      <%= render partial: 'node', collection: node.children, locals: { level: level + 1 } %>
+    </ul>
+  <% end %>
+</li>

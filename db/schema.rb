@@ -10,12 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_01_14_201710) do
+ActiveRecord::Schema[7.1].define(version: 2024_02_18_132955) do
   create_table "nodes", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "title"
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "parent_id", null: false
+    t.index ["parent_id"], name: "index_nodes_on_parent_id"
   end
 
+  add_foreign_key "nodes", "nodes", column: "parent_id"
 end

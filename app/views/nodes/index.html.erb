@@ -1,13 +1,14 @@
 <!-- app/views/nodes/index.html.erb -->
 
-<h1>Nodes List</h1>
-<ul>
-  <% @nodes.each do |node| %>
-    <li>
-      <%= link_to node.title, node_path(node) %>
-      <%= link_to 'Delete', node_path(node), data: { turbo_confirm: "Are you sure?", turbo_method: :delete } %>
-    </li>
-  <% end %>
-</ul>
+<div class="node-tree">
+  <h1 class="node-center-title">Nodes List</h1>
+  <div class="node-center">
+    <%= link_to 'New Node', new_node_path, class: 'btn-new-node' %>
+  </div>
 
-<%= link_to 'New Node', new_node_path %>
+  <ul class="node-branches">
+    <% @nodes.where(parent_id: nil).each do |node| %>
+      <%= render 'node', node: node, level: 0, on_index: true %>
+    <% end %>
+  </ul>
+</div>

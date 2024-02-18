@@ -1,0 +1,70 @@
+/* app/assets/stylesheets/custom.css */
+
+/* Загальні стилі */
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Стилі для деревоподібної структури */
+  .node-tree {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .node-center-title {
+    color: #333;
+  }
+  
+  .node-center {
+    margin-bottom: 20px;
+  }
+  
+  .node-branches {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .node-branch {
+    margin: 0 20px;
+  }
+  
+  /* Стилі для посилань */
+  a {
+    text-decoration: none;
+    color: #007BFF;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Стилі для кнопки "New Node" */
+  .btn-new-node {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .btn-new-node:hover {
+    background-color: #218838;
+  }
+  /* app/assets/stylesheets/custom.css */
+
+/* Додаткові стилі для зручності */
+.node-branches {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .node-branch {
+    margin: 10px 0;
+  }
+  
+  /* Інші стилі залишаються незмінними */
+  
